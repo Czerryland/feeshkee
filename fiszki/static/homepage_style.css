@@ -1,81 +1,133 @@
 @import url('https://fonts.googleapis.com/css2?family=Special+Gothic+Expanded+One&display=swap');
+
 body {
     margin: 0;
     font-family: "Special Gothic Expanded One", sans-serif;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
     height: 100vh;
 }
 
-header{
+header {
+    background: cyan;
+}
+
+nav {
+    text-align: center;
+}
+
+nav > p {
+    padding: 10px;
+    margin: 0;
+}
+
+.main-section {
+    margin-top: 50px;
     display: flex;
     justify-content: center;
     align-items: center;
-    border: solid 1px;
-    border-radius: 20px;
-    text-align: center;
-    height: 40vh;
-    min-height: 500px;
-    min-width: 900px;
-    padding: 10px;
+    flex-direction: column;
+    width: 100vw;
+    height: 70vh;
 }
 
-h3{
+.logobox {
+    height: 40vh;
+    position: absolute;
+}
+
+h3 {
     margin-top: 15vh;
-    text-wrap: wrap ;
+    text-wrap: wrap;
 }
-h1{
-    font-size: 50px;
+
+h1 {
+    text-align: center;
+    font-size: 100px;
 }
-.text-container{
+
+.text-container {
     height: 100%;
-    width: 30vw;
+    width: 50vw;
     min-width: 450px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
-.logo{
+
+.logo {
     height: 100%;
-    width: 30vw;
+    width: 50vw;
     position: relative;
     min-width: 450px;
-
 }
+
 .card {
+    z-index: -1;
     background: red;
     border-radius: 20px;
     height: 300px;
     width: 200px;
     position: absolute;
-    top: 45%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    transform-origin: bottom left;
+    top: 50%; 
+    transform-origin: center bottom; 
+    transform: translateX(-50%) translateY(-50%);
+    transition: transform 0.3s ease;
 }
 
 .card:nth-of-type(1) {
-    transform: translate(-50%, -50%) rotate(20deg);
+    top: 55%; 
+    left: 20%;
     background: blue;
+    transform: translateX(-50%) translateY(-50%) rotate(-10deg);
 }
 
 .card:nth-of-type(2) {
-    transform: translate(-50%, -50%) rotate(10deg);
-    background: green;
+    top: 52%; 
+    left: 30%;
+    background: mediumblue;
+    transform: translateX(-50%) translateY(-50%) rotate(-5deg);
 }
-.login-section{
+
+.card:nth-of-type(3) {
+    left: 40%;
+    background: green;
+    transform: translateX(-50%) translateY(-50%) rotate(-2deg);
+}
+
+.card:nth-of-type(4) {
+    left: 50%;
+    background: pink;
+    transform: translateX(-50%) translateY(-50%) rotate(0deg);
+}
+
+.card:nth-of-type(5) {
+    left: 60%;
+    background: yellow;
+    transform: translateX(-50%) translateY(-50%) rotate(2deg);
+}
+
+.card:nth-of-type(6) {
+    top: 52%;   
+    left: 70%;
+    background: cyan;
+    transform: translateX(-50%) translateY(-50%) rotate(5deg);
+}
+
+.card:nth-of-type(7) {
+    top: 55%; 
+    left: 80%;
+    background: magenta;
+    transform: translateX(-50%) translateY(-50%) rotate(10deg);
+}
+
+.login-section {
     padding: 40px;
     display: flex;
     flex-direction: row;
     width: 40vw;
     justify-content: space-between;
 }
-button{
+
+button {
     height: 50px;
     width: 200px;
-}
-
-.main-section{
-    height: 1000px;
-    width: 100vw;
-    background: red;
 }
